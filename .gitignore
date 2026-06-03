@@ -1,0 +1,16 @@
+# Obsidian workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace-tabs.json
+
+# Obsidian caches
+.obsidian/cache
+.obsidian/bases-cache
+
+# Trash
+.trash/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
