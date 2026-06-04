@@ -1,16 +1,68 @@
-# Obsidian workspace state
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/workspace-tabs.json
-
-# Obsidian caches
-.obsidian/cache
-.obsidian/bases-cache
-
-# Trash
+# ===== Obsidian =====
+.obsidian/
+.vault-operator/
+.obsidian-agent/
 .trash/
 
-# OS files
+# Obsidian sync conflict copies
+*.md.sync-conflict-*
+
+# ===== OS generated =====
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 desktop.ini
+$RECYCLE.BIN/
+
+# ===== Editor temp/swap files =====
+# Vim
+*.swp
+*.swo
+*~
+tags
+Session.vim
+.netrwhist
+
+# Emacs
+*\#
+*~
+.\#*
+*.elc
+auto-save-list/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# JetBrains IDEs
+.idea/
+
+# ===== Backup & temp files =====
+*.bak
+*.tmp
+*.temp
+*.orig
+*.log
+
+# ===== Merge conflict leftovers =====
+*.MERGE
+*.REMOTE
+*.LOCAL
+*.BASE
+
+# ===== Node.js (if running scripts) =====
+node_modules/
+npm-debug.log*
+
+# ===== Misc =====
+*.pid
+*.seed
+*.pid.lock
