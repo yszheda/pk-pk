@@ -1,14 +1,18 @@
 ---
 title: "A new way to build chips: Sequentially stacking silicon to extend Moore’s law"
-source: "https://matse.illinois.edu/news/85775"
+source: https://matse.illinois.edu/news/85775
 author:
   - "[[Grainger Engineering Office of Marketing]]"
   - "[[Communications]]"
 published:
 created: 2026-06-02
-description: "Researchers led by Qing Cao have demonstrated a scalable way to directly and sequentially stack high-performance silicon circuits. This advance marks a critical step toward realizing the full potential of three-dimensional chips that could carry computing beyond the limits of traditional scaling."
+description: Researchers led by Qing Cao have demonstrated a scalable way to directly and sequentially stack high-performance silicon circuits. This advance marks a critical step toward realizing the full potential of three-dimensional chips that could carry computing beyond the limits of traditional scaling.
 tags:
-  - "ToRead"
+  - ToRead
+  - hardware
+  - semiconductors
+  - computer-architecture
+  - research
 ---
 ## A new way to build chips: Sequentially stacking silicon to extend Moore’s law 一种新的建芯片方式：顺序堆叠硅以延长摩尔定律
 

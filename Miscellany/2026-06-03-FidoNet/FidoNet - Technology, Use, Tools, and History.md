@@ -1,12 +1,16 @@
 ---
 title: "FidoNet: Technology, Use, Tools, and History"
-source: "https://www.fidonet.org/inet92_Randy_Bush.txt"
+source: https://www.fidonet.org/inet92_Randy_Bush.txt
 author:
 published:
 created: 2026-06-03
 description:
 tags:
-  - "ToRead"
+  - ToRead
+  - networking
+  - history
+  - retro-computing
+  - ham-radio
 ---
 ```
 FidoNet: Technology, Use, Tools, and History

@@ -1,12 +1,16 @@
 ---
-title: "Every byte matters"
-source: "https://fzakaria.com/2026/06/01/every-byte-matters"
+title: Every byte matters
+source: https://fzakaria.com/2026/06/01/every-byte-matters
 author:
 published: 2026-06-02
 created: 2026-06-04
-description: "I have spent a large portion of my career working in Java. In that time, you get used to huge classes. New functionality? Just add a new method and field to the class. The cost of each new field is rarely considered. Performance is often considered from a classic computer science perspective by considering asymptotic analysis of the algorithms and data structures in-use."
+description: I have spent a large portion of my career working in Java. In that time, you get used to huge classes. New functionality? Just add a new method and field to the class. The cost of each new field is rarely considered. Performance is often considered from a classic computer science perspective by considering asymptotic analysis of the algorithms and data structures in-use.
 tags:
-  - "ToRead"
+  - ToRead
+  - programming-languages
+  - java
+  - performance
+  - systems
 ---
 I have spent a large portion of my career working in Java. In that time, you get used to huge classes. New functionality? Just add a new method and field to the class. The cost of each new field is rarely considered. Performance is often considered from a *classic computer science* perspective by considering asymptotic analysis of the algorithms and data structures in-use.
 

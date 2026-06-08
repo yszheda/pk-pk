@@ -1,13 +1,17 @@
 ---
-title: "rsync and outrage"
-source: "https://medium.com/@tridge60/rsync-and-outrage-d9849599e5a0"
+title: rsync and outrage
+source: https://medium.com/@tridge60/rsync-and-outrage-d9849599e5a0
 author:
   - "[[Andrew TridgellAndrew Tridgell 安德鲁·特里杰尔]]"
 published: 2026-06-03
 created: 2026-06-03
-description: "I gave up blogging a long time ago (apart from an occasional thing about ArduPilot), I tend to just write code and hope people find it usefu"
+description: I gave up blogging a long time ago (apart from an occasional thing about ArduPilot), I tend to just write code and hope people find it usefu
 tags:
-  - "ToRead"
+  - ToRead
+  - open-source
+  - software
+  - licensing
+  - security
 ---
 I gave up blogging a long time ago (apart from an occasional thing about ArduPilot), I tend to just write code and hope people find it useful, so it feels a bit odd to be writing this, but given the volume of rage posts I’ve been on the receiving end of lately I thought maybe I should post something.I gave up blogging a long time ago (apart from an occasional thing about ArduPilot), I tend to just write code and hope people find it useful, so it feels a bit odd to be writing this, but given the volume of rage posts I’ve been on the receiving end of lately I thought maybe I should post something.我很久以前就不写博客了（偶尔会写一些关于 ArduPilot 的内容），我通常只是编写代码，希望人们能觉得这些代码有用，所以写这篇博客感觉有点奇怪。但考虑到最近我收到了大量愤怒的帖子，我想或许应该发点东西。
 

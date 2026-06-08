@@ -1,13 +1,18 @@
 ---
 title: "Introducing Gemma 4 12B: a unified, encoder-free multimodal model"
-source: "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/"
+source: https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/
 author:
   - "[[Olivier Lacombe]]"
 published: 2026-06-04
 created: 2026-06-04
-description: "An overview of Gemma 4 12B, a model designed to bring high-performance multimodal intelligence directly to your laptop."
+description: An overview of Gemma 4 12B, a model designed to bring high-performance multimodal intelligence directly to your laptop.
 tags:
-  - "ToRead"
+  - ToRead
+  - ai
+  - llm
+  - machine-learning
+  - multimodal
+  - open-source
 ---
 Today, we are introducing Gemma 4 12B, our latest model designed to bring agentic multimodal intelligence directly to laptops. Bridging the gap between our edge-friendly E4B and our more advanced 26B Mixture of Experts (MoE), Gemma 4 12B packages powerful capabilities inside a reduced memory footprint. It is also our first mid-sized model to feature native audio inputs.
 

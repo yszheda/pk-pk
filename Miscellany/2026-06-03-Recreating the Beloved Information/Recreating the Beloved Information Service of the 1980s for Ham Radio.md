@@ -1,13 +1,17 @@
 ---
-title: "Recreating the Beloved Information Service of the 1980s for Ham Radio"
-source: "https://spectrum.ieee.org/reviving-teletext-for-ham-radio"
+title: Recreating the Beloved Information Service of the 1980s for Ham Radio
+source: https://spectrum.ieee.org/reviving-teletext-for-ham-radio
 author:
   - "[[Stephen Cass]]"
 published: 2026-04-23
 created: 2026-06-03
-description: "By fusing AX.25 with classic teletext graphics, Spectel provides radio hams with faster, clearer signals."
+description: By fusing AX.25 with classic teletext graphics, Spectel provides radio hams with faster, clearer signals.
 tags:
-  - "ToRead"
+  - ToRead
+  - ham-radio
+  - networking
+  - history
+  - retro-computing
 ---
 ![](https://spectrum.ieee.org/media-library/a-personal-computer-displays-a-blocky-computer-graphic-depicting-a-city-skyline-with-the-words-cq-cq-cq-de-kb1wnr-in-front-of.png?id=65575350&width=3600&height=3461)
 

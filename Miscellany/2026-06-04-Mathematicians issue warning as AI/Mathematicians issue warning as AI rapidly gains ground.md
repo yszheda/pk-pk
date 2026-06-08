@@ -1,13 +1,17 @@
 ---
-title: "Mathematicians issue warning as AI rapidly gains ground"
-source: "https://www.science.org/content/article/mathematicians-issue-warning-ai-rapidly-gains-ground"
+title: Mathematicians issue warning as AI rapidly gains ground
+source: https://www.science.org/content/article/mathematicians-issue-warning-ai-rapidly-gains-ground
 author:
   - "[[Celina Zhao]]"
 published: 2026-06-03
 created: 2026-06-04
-description: "New declaration argues the technology jeopardizes the field’s values and culture"
+description: New declaration argues the technology jeopardizes the field’s values and culture
 tags:
-  - "ToRead"
+  - ToRead
+  - ai
+  - mathematics
+  - ethics
+  - research-policy
 ---
 As artificial intelligence (AI) muscles its way into field after field, researchers have wrestled with what it means for the future of their disciplines. Few communities have felt that pressure more acutely than mathematicians, who have haplessly watched AI get frighteningly smart, frighteningly fast.随着人工智能（AI）强势涌入一个又一个领域，研究人员一直在纠结这对各自学科的未来意味着什么。没有哪个群体比数学家更真切地感受到这种压力——他们只能无奈地看着人工智能以惊人的速度变得异常智能。
 

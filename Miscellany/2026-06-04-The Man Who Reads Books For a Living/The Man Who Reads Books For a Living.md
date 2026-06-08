@@ -1,13 +1,16 @@
 ---
-title: "The Man Who Reads Books For a Living (One Every Two Days)"
-source: "https://lithub.com/the-man-who-reads-books-for-a-living-one-every-two-days/"
+title: The Man Who Reads Books For a Living (One Every Two Days)
+source: https://lithub.com/the-man-who-reads-books-for-a-living-one-every-two-days/
 author:
   - "[[Julien C. LevyJulien C. Levy 朱利安·C·利维]]"
 published: 2026-05-19
 created: 2026-06-04
-description: "When Clarke Speicher (spike-er) asked how I liked the screen adaptation of Train Dreams, Denis Johnson’s novella following the solitary logger Robert Granier in the early 20th-century American West…"
+description: When Clarke Speicher (spike-er) asked how I liked the screen adaptation of Train Dreams, Denis Johnson’s novella following the solitary logger Robert Granier in the early 20th-century American West…
 tags:
-  - "ToRead"
+  - ToRead
+  - books
+  - culture
+  - reading
 ---
 ## The Man Who Reads Books For a Living (One Every Two Days)靠读书为生的人（两天读一本）
 

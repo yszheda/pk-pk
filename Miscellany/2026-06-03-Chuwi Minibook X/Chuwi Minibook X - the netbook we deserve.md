@@ -7,6 +7,11 @@ published: 2026-06-01
 created: 2026-06-03
 description:
 tags:
+  - ToRead
+  - hardware
+  - sbc
+  - linux
+  - laptop
 ---
 Netbooks are dead, but the Chuwi Minibook X scratches the same itch.
 

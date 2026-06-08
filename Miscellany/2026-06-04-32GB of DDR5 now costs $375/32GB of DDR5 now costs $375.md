@@ -1,13 +1,18 @@
 ---
-title: "32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building"
-source: "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building"
+title: 32GB of DDR5 now costs $375 minimum — AI shortage continues to squeeze PC building
+source: https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building
 author:
   - "[[Stephen Warwick]]"
 published: 2026-06-03
 created: 2026-06-04
-description: "Lower-priced kits are disappearing by the day"
+description: Lower-priced kits are disappearing by the day
 tags:
-  - "ToRead"
+  - ToRead
+  - hardware
+  - memory
+  - pc-building
+  - supply-chain
+  - ai
 ---
 As the demands of AI continue to consume manufacturing capacity at every level of the PC hardware supply chain, 32GB of DDR5 RAM — broadly understood to be the sweet spot for gaming PCs and enthusiast builds — can no longer be found for less than $375. Well, $374.97 to be precise.随着人工智能的需求在个人电脑硬件供应链的各个环节持续消耗制造产能，32GB DDR5 内存——普遍被认为是游戏主机和发烧友装机的黄金容量——已无法以低于 375 美元的价格买到。准确来说，目前的价格是 374.97 美元。
 

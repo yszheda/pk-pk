@@ -6,6 +6,11 @@ published: 2019-09-17
 created: 2026-06-03
 description: The Open Repair Data Standard (ORDS) defines a shared approach towards collecting and […]
 tags:
+  - ToRead
+  - open-source
+  - hardware
+  - right-to-repair
+  - data-standards
 ---
 The **Open Repair Data Standard (ORDS)** defines a shared approach towards collecting and sharing repair data about small electricals and electronics. The goal of this standard is to make it easy to combine open data on electronics repair that has been collected by many different groups.
 

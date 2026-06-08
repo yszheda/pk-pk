@@ -1,13 +1,18 @@
 ---
-title: "Brume — desktop multi-timbral instrument"
-source: "https://brume.aftertone.co/"
+title: Brume — desktop multi-timbral instrument
+source: https://brume.aftertone.co/
 author:
   - "[[Brandon Huey]]"
 published:
 created: 2026-06-04
-description: "A desktop multi-timbral music machine with four synthesis engines, a 10″ touch surface, and one cable to your DAW."
+description: A desktop multi-timbral music machine with four synthesis engines, a 10″ touch surface, and one cable to your DAW.
 tags:
-  - "ToRead"
+  - ToRead
+  - synthesizer
+  - music
+  - audio
+  - hardware
+  - creative-coding
 ---
 01 / Engines
 

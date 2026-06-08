@@ -6,6 +6,10 @@ published:
 created: 2026-06-04
 description: with apologies to Terry Bisson
 tags:
+  - ai
+  - llm
+  - philosophy
+  - culture
 ---
 ## They're Made Out of Weights 它们由权重构成
 

@@ -1,12 +1,17 @@
 ---
-title: "A Post-Quantum Future for Let's Encrypt"
-source: "https://letsencrypt.org/2026/06/03/pq-certs"
+title: A Post-Quantum Future for Let's Encrypt
+source: https://letsencrypt.org/2026/06/03/pq-certs
 author:
 published: 2026-06-03
 created: 2026-06-04
 description: "Let’s Encrypt is committed to a post-quantum-safe Web PKI. The path we’re planning to take is Merkle Tree Certificates (“MTCs”), a new approach that adds post-quantum authentication to the web without sacrificing the speed and reliability that have made TLS universal.This post is about these plans and why we believe MTCs are worth pursuing as a key to a post-quantum future.An increasingly urgent problem For much of the last several years, the conversation about post-quantum cryptography has been a conversation about encryption. The reasoning was straightforward: an attacker who records encrypted traffic today might be able to decrypt it years from now once quantum computers can break the underlying math. Authentication, the part of TLS that indicates a server is who it says it is, has been a less urgent problem. A quantum computer needs to forge a signature in real time, not retroactively, so threats to authentication hinge on the existence of a cryptographically relevant quantum computer (CRQC)."
 tags:
-  - "ToRead"
+  - ToRead
+  - security
+  - cryptography
+  - post-quantum
+  - web
+  - tls
 ---
 Let’s Encrypt is committed to a post-quantum-safe Web PKI. The path we’re planning to take is Merkle Tree Certificates (“MTCs”), a new approach that adds post-quantum authentication to the web without sacrificing the speed and reliability that have made TLS universal.Let’s Encrypt 致力于打造抗量子安全的网页公钥基础设施（Web PKI）。我们规划采用的路径是默克尔树证书（Merkle Tree Certificates，简称 MTCs），这是一种全新的方案，能在为网页添加抗量子认证功能的同时，不牺牲让传输层安全协议（TLS）得以普及的速度与可靠性。
 

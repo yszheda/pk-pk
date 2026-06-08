@@ -1,12 +1,16 @@
 ---
-title: "The Unreasonable Redundancy of Nature's Protein Folds"
-source: "https://research.ligo.bio/posts/unreasonable-redundancy-of-natural-protein-folds/"
+title: The Unreasonable Redundancy of Nature's Protein Folds
+source: https://research.ligo.bio/posts/unreasonable-redundancy-of-natural-protein-folds/
 author:
 published:
 created: 2026-06-03
-description: "A Ligo research note on redundancy in natural protein fold space and what kind of data still carries signal."
+description: A Ligo research note on redundancy in natural protein fold space and what kind of data still carries signal.
 tags:
-  - "ToRead"
+  - ToRead
+  - biology
+  - machine-learning
+  - genetics
+  - bioinformatics
 ---
 ## The Unreasonable Redundancy of Nature's Protein Folds自然蛋白质折叠的不合理冗余
 

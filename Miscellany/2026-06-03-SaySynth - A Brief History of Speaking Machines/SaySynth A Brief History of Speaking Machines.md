@@ -1,12 +1,17 @@
 ---
 title: "SaySynth: A Brief History of Speaking Machines"
-source: "https://brian.abelson.live/log/2025/12/20/saysynth-composition-codes.html"
+source: https://brian.abelson.live/log/2025/12/20/saysynth-composition-codes.html
 author:
 published:
 created: 2026-06-03
-description: "These are expanded notes from a talk I gave at composition. codes on December 21, 2025. Slides here. Video here. SaySynth is a synthesizer I built on top of ..."
+description: These are expanded notes from a talk I gave at composition. codes on December 21, 2025. Slides here. Video here. SaySynth is a synthesizer I built on top of ...
 tags:
-  - "ToRead"
+  - ToRead
+  - synthesizer
+  - audio
+  - music
+  - history
+  - creative-coding
 ---
 
 *These are expanded notes from a talk I gave at [composition.codes](https://composition.codes/) on December 21, 2025. [Slides here](https://brian.abelson.live/slides/saysynth.html). [Video here](https://www.youtube.com/watch?v=tX3nEPt0fKk).这些是我于2025年12月21日在 [composition.codes](https://composition.codes/) 发表的演讲的扩展笔记。 [幻灯片在此](https://brian.abelson.live/slides/saysynth.html) 。 [视频在此](https://www.youtube.com/watch?v=tX3nEPt0fKk) 。*

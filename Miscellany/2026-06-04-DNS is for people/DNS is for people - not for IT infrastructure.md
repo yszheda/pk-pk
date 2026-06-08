@@ -1,12 +1,16 @@
 ---
-title: "DNS is for people - not for IT infrastructure"
-source: "https://louwrentius.com/dns-is-for-people-not-for-it-infrastructure.html"
+title: DNS is for people - not for IT infrastructure
+source: https://louwrentius.com/dns-is-for-people-not-for-it-infrastructure.html
 author:
 published:
 created: 2026-06-04
 description:
 tags:
-  - "ToRead"
+  - ToRead
+  - networking
+  - dns
+  - self-hosting
+  - homelab
 ---
 The [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) exists because it's difficult for people to remember IP addresses (185.15.59.224) and much easier to remember domain names (wikipedia.org). [域名系统](https://en.wikipedia.org/wiki/Domain_Name_System) 的存在是因为人们很难记住IP地址（185.15.59.224），而记住域名（wikipedia.org）则要容易得多。
 

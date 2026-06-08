@@ -1,13 +1,17 @@
 ---
-title: "strace-ui, Bonsai_term, and the TUI renaissance"
-source: "https://blog.janestreet.com/strace-ui-bonsai-term-and-the-tui-renaissance/"
+title: strace-ui, Bonsai_term, and the TUI renaissance
+source: https://blog.janestreet.com/strace-ui-bonsai-term-and-the-tui-renaissance/
 author:
   - "[[James Somers]]"
 published:
 created: 2026-06-03
-description: "We’ve always found strace useful but somewhat hard to work with. Its output is often inscrutable, it’s hard to follow subprocesses or threads, and if you wan..."
+description: We’ve always found strace useful but somewhat hard to work with. Its output is often inscrutable, it’s hard to follow subprocesses or threads, and if you wan...
 tags:
-  - "ToRead"
+  - ToRead
+  - programming-languages
+  - systems
+  - linux
+  - software
 ---
 We’ve always found strace useful but somewhat hard to work with. Its output is often inscrutable, it’s hard to follow subprocesses or threads, and if you want to filter syscalls you have to rerun the trace with a flag for each one. What you want in debugging is a tool for exploring, refining, etc., but strace can make this difficult.
 

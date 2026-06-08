@@ -1,12 +1,16 @@
 ---
 title: "BQN: What is a primitive?"
-source: "https://mlochbaum.github.io/BQN/commentary/primitive.html"
+source: https://mlochbaum.github.io/BQN/commentary/primitive.html
 author:
 published:
 created: 2026-06-04
 description:
 tags:
-  - "ToRead"
+  - ToRead
+  - programming-languages
+  - array-programming
+  - compilers
+  - software
 ---
 ## What is a primitive?
 

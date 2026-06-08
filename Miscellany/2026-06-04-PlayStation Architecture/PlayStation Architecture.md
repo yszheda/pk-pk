@@ -1,13 +1,17 @@
 ---
-title: "PlayStation Architecture | A Practical Analysis"
-source: "https://www.copetti.org/writings/consoles/playstation/"
+title: PlayStation Architecture | A Practical Analysis
+source: https://www.copetti.org/writings/consoles/playstation/
 author:
   - "[[Rodrigo Copetti]]"
 published: 2019-08-08
 created: 2026-06-04
-description: "An in-depth analysis that explains how this console works internally"
+description: An in-depth analysis that explains how this console works internally
 tags:
-  - "ToRead"
+  - ToRead
+  - hardware
+  - computer-architecture
+  - retro-computing
+  - gaming
 ---
 ## Supporting imagery
 

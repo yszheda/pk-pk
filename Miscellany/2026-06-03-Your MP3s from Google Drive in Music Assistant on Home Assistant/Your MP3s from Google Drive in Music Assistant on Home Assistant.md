@@ -1,13 +1,18 @@
 ---
-title: "Your MP3s from Google Drive in Music Assistant on Home Assistant"
-source: "https://blog.tomayac.com/2026/05/30/your-mp3s-from-google-drive-in-music-assistant-on-home-assistant/"
+title: Your MP3s from Google Drive in Music Assistant on Home Assistant
+source: https://blog.tomayac.com/2026/05/30/your-mp3s-from-google-drive-in-music-assistant-on-home-assistant/
 author:
   - "[[Thomas Steiner]]"
 published: 2026-05-30
 created: 2026-06-03
-description: "The personal blog of Thomas Steiner"
+description: The personal blog of Thomas Steiner
 tags:
-  - "ToRead"
+  - ToRead
+  - homelab
+  - audio
+  - music
+  - self-hosting
+  - home-assistant
 ---
 Like most millennials, I grew up with [Napster](https://en.wikipedia.org/wiki/Napster), then [Kazaa](https://en.wikipedia.org/wiki/Kazaa), then [eDonkey2000](https://en.wikipedia.org/wiki/EDonkey2000), obviously [CD rips](https://en.wikipedia.org/wiki/Ripping), and of course [LAN parties](https://en.wikipedia.org/wiki/LAN_party). Over the years, this has led to a large collection of completely legal MP3 files that I have backed up on two large external USB spinning disks that haven't spun for a long time now, but the files also exist on Google Drive.
 

@@ -1,13 +1,17 @@
 ---
 title: "How embryos shape their limbs: a key discovery of “genetic brakes”"
-source: "https://nouvelles.umontreal.ca/en/article/2026/06/02/how-embryos-shape-their-limbs-a-key-discovery-of-genetic-brakes"
+source: https://nouvelles.umontreal.ca/en/article/2026/06/02/how-embryos-shape-their-limbs-a-key-discovery-of-genetic-brakes
 author:
   - "[[By UdeMnouvelles]]"
 published: 2026-06-Tue
 created: 2026-06-04
-description: "In mice, medical professor Marie Kmita and her team at the IRCM discover how certain proteins switch off the right genes at the right time, allowing others to take over and complete development."
+description: In mice, medical professor Marie Kmita and her team at the IRCM discover how certain proteins switch off the right genes at the right time, allowing others to take over and complete development.
 tags:
-  - "ToRead"
+  - ToRead
+  - genetics
+  - biology
+  - developmental-biology
+  - epigenetics
 ---
 ![[Translate to English:] ](https://nouvelles.umontreal.ca/public/nouvelles/_processed_/d/b/csm_Creative_image_of_embryonic_stem_cells_dfdf4d6044.jpg)
 

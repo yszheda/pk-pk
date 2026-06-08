@@ -1,13 +1,17 @@
 ---
-title: "You Don't Love systemd Timers Enough"
-source: "https://blog.tjll.net/you-dont-love-systemd-timers-enough/"
+title: You Don't Love systemd Timers Enough
+source: https://blog.tjll.net/you-dont-love-systemd-timers-enough/
 author:
   - "[[Tyler Langlois]]"
 published:
 created: 2026-06-03
-description: "A cron job for every man, woman, and child."
+description: A cron job for every man, woman, and child.
 tags:
-  - "ToRead"
+  - ToRead
+  - devops
+  - linux
+  - systems
+  - automation
 ---
 ### « You Don't Love systemd Timers Enough
 

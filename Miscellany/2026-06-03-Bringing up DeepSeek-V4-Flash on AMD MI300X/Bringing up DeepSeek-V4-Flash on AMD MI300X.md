@@ -1,12 +1,17 @@
 ---
-title: "Bringing up DeepSeek-V4-Flash on AMD MI300X"
-source: "https://fergusfinn.com/blog/deepseek-v4-flash-mi300x/"
+title: Bringing up DeepSeek-V4-Flash on AMD MI300X
+source: https://fergusfinn.com/blog/deepseek-v4-flash-mi300x/
 author:
 published: 2026-06-01
 created: 2026-06-03
-description: "A story of sharp edges, segfaults, and standards"
+description: A story of sharp edges, segfaults, and standards
 tags:
-  - "ToRead"
+  - ToRead
+  - ai
+  - llm
+  - gpu
+  - hardware
+  - deep-learning
 ---
 At [Doubleword](https://app.doubleword.ai/) we are building an inference cloud designed for volume. To do that we have to reckon with the enveloping compute shortage.
 

@@ -6,6 +6,11 @@ published: 2026-06-01
 created: 2026-06-03
 description: Reading the screenshots, diagrams and tables in technical documentation for LLMs
 tags:
+  - ai
+  - llm
+  - rag
+  - machine-learning
+  - databases
 ---
 Kapa builds AI assistants that answer questions from technical documentation. The knowledge bases we process hold millions of images: screenshots, architecture diagrams, circuit schematics, annotated UI walkthroughs. We spent several months working out how to make them useful in our RAG pipeline.  
 Kapa 构建能够从技术文档中回答问题的 AI 助手。我们处理的知识库包含数百万张图像：截图、架构图、电路图、注释的 UI 演示。我们花费数月时间研究如何使它们在我们的 RAG 管道中发挥作用。
