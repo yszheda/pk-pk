@@ -1,0 +1,143 @@
+#!/usr/bin/env bash
+#
+# pre-commit-check-paths — Git pre-commit hook to reject/fix filenames with
+# platform-illegal characters.
+#
+# Installation:
+#   cp pre-commit-check-paths <repo>/.git/hooks/pre-commit
+#   chmod +x <repo>/.git/hooks/pre-commit
+#
+# Configuration (git config):
+#   hooks.badPaths.action    reject|fix|prompt  (default: reject)
+#   hooks.badPaths.platform  windows|linux|mac|cross  (default: cross)
+#
+set -euo pipefail
+
+# ── config ──────────────────────────────────────────────────────────────────
+ACTION=$(git config --get hooks.badPaths.action 2>/dev/null || echo "reject")
+PLATFORM=$(git config --get hooks.badPaths.platform 2>/dev/null || echo "cross")
+
+# ── platform rules ──────────────────────────────────────────────────────────
+has_bad_name() {
+  local name="$1"
+  # Check reserved names (Windows/cross only)
+  if [[ "$PLATFORM" == "windows" || "$PLATFORM" == "cross" ]]; then
+    local base="${name%%.*}"
+    local upper="${base^^}"
+    case "$upper" in CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9]) return 0 ;; esac
+  fi
+  # Check for illegal characters using grep
+  local pat
+  case "$PLATFORM" in
+    windows) pat='[<>:"/\\|?*]' ;;
+    linux)   pat='/' ;;
+    mac)     pat='[/:]' ;;
+    cross|*) pat='[<>:"/\\|?*,;=&$]' ;;
+  esac
+  if printf '%s' "$name" | grep -qE "$pat"; then return 0; fi
+  # Check for control characters
+  if printf '%s' "$name" | grep -qP '[\x01-\x1f]'; then return 0; fi
+  return 1
+}
+
+sanitize_name() {
+  local name="$1" result
+  case "$PLATFORM" in
+    windows) result=$(printf '%s' "$name" | sed 's/[<>:"\/\\|?*]/_/g') ;;
+    linux)   result=$(printf '%s' "$name" | sed 's/\//_/g') ;;
+    mac)     result=$(printf '%s' "$name" | sed 's/[\/:]/_/g') ;;
+    cross|*) result=$(printf '%s' "$name" | sed 's/[<>:"\/\\|?*,;=&$]/_/g') ;;
+  esac
+  result=$(printf '%s' "$result" | tr '[:cntrl:]' '_')
+  while [[ "$result" == *__*__* ]]; do result="${result//__/_}"; done
+  result="${result#"${result%%[!_ ]*}"}"
+  result="${result%"${result##*[!_ ]}"}"
+  [[ -z "$result" ]] && result="unnamed_file"
+  echo "$result"
+}
+
+# ── scan staged files ───────────────────────────────────────────────────────
+bad_files=()
+while IFS= read -r -d '' fpath; do
+  bname="${fpath##*/}"
+  if has_bad_name "$bname"; then
+    bad_files+=("$fpath")
+  fi
+done < <(git diff --cached --name-only -z)
+
+if [[ ${#bad_files[@]} -eq 0 ]]; then
+  exit 0
+fi
+
+# ── report issues ───────────────────────────────────────────────────────────
+echo "ERROR: Found ${#bad_files[@]} file(s) with illegal characters (platform: $PLATFORM):"
+for f in "${bad_files[@]}"; do
+  bname="${f##*/}"
+  suggested=$(sanitize_name "$bname")
+  echo "  $f -> ${f%/*}/${suggested}"
+done
+echo ""
+
+# ── action ──────────────────────────────────────────────────────────────────
+do_fix() {
+  local fixed=0
+  for fpath in "${bad_files[@]}"; do
+    local bname="${fpath##*/}"
+    local dirpart="${fpath%/*}"
+    [[ "$dirpart" == "$fpath" ]] && dirpart=""
+    local new_name
+    new_name=$(sanitize_name "$bname")
+    local new_path="${dirpart:+${dirpart}/}${new_name}"
+
+    # Collision avoidance
+    local counter=2 base_sanitized="$new_name" ext="${bname#*.}"
+    [[ "$ext" == "$bname" ]] && ext=""
+    while [[ -e "$new_path" ]]; do
+      if [[ -n "$ext" && "$ext" != "$base_sanitized" ]]; then
+        new_name="${base_sanitized}_${counter}.${ext}"
+      else
+        new_name="${base_sanitized}_${counter}"
+      fi
+      new_path="${dirpart:+${dirpart}/}${new_name}"
+      counter=$((counter+1))
+    done
+
+    # Unstage old, rename in working tree, stage new
+    git reset HEAD -- "$fpath" >/dev/null 2>&1 || true
+    if [[ -e "$fpath" ]]; then
+      mv "$fpath" "$new_path"
+    fi
+    git add -- "$new_path"
+    echo "  FIXED: $fpath -> $new_path"
+    fixed=$((fixed+1))
+  done
+  echo "Auto-fixed $fixed file(s)."
+}
+
+do_reject() {
+  echo "Commit rejected. Rename these files to proceed."
+  echo "  Or run: git config hooks.badPaths.action fix  (to auto-fix)"
+  exit 1
+}
+
+case "$ACTION" in
+  fix)
+    do_fix
+    ;;
+  prompt)
+    echo "What do you want to do?"
+    echo "  [r]eject commit (default)"
+    echo "  [f]ix filenames automatically"
+    echo "  [c]ontinue anyway (not recommended)"
+    echo ""
+    read -r -p "Choice: " choice
+    case "$choice" in
+      f|F) do_fix ;;
+      c|C) echo "Continuing with bad filenames..." ;;
+      *)   do_reject ;;
+    esac
+    ;;
+  reject|*)
+    do_reject
+    ;;
+esac

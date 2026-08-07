@@ -1,0 +1,131 @@
+#!/usr/bin/env bash
+#
+# pre-receive-check-paths — Server-side hook to reject pushes containing
+# filenames with platform-illegal characters.
+#
+# Installation (on bare repo):
+#   cp pre-receive-check-paths <bare-repo>/hooks/pre-receive
+#   chmod +x <bare-repo>/hooks/pre-receive
+#
+# Configuration (on bare repo):
+#   git config hooks.badPaths.action    reject|fix  (default: reject)
+#   git config hooks.badPaths.platform  windows|linux|mac|cross  (default: cross)
+#
+set -euo pipefail
+
+# ── config ──────────────────────────────────────────────────────────────────
+ACTION=$(git config --get hooks.badPaths.action 2>/dev/null || echo "reject")
+PLATFORM=$(git config --get hooks.badPaths.platform 2>/dev/null || echo "cross")
+
+# ── platform rules ──────────────────────────────────────────────────────────
+has_bad_name() {
+  local name="$1"
+  if [[ "$PLATFORM" == "windows" || "$PLATFORM" == "cross" ]]; then
+    local base="${name%%.*}"
+    local upper="${base^^}"
+    case "$upper" in CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9]) return 0 ;; esac
+  fi
+  local pat
+  case "$PLATFORM" in
+    windows) pat='[<>:"/\\|?*]' ;;
+    linux)   pat='/' ;;
+    mac)     pat='[/:]' ;;
+    cross|*) pat='[<>:"/\\|?*,;=&$]' ;;
+  esac
+  if printf '%s' "$name" | grep -qE "$pat"; then return 0; fi
+  if printf '%s' "$name" | grep -qP '[\x01-\x1f]'; then return 0; fi
+  return 1
+}
+
+sanitize_name() {
+  local name="$1" result
+  case "$PLATFORM" in
+    windows) result=$(printf '%s' "$name" | sed 's/[<>:"\/\\|?*]/_/g') ;;
+    linux)   result=$(printf '%s' "$name" | sed 's/\//_/g') ;;
+    mac)     result=$(printf '%s' "$name" | sed 's/[\/:]/_/g') ;;
+    cross|*) result=$(printf '%s' "$name" | sed 's/[<>:"\/\\|?*,;=&$]/_/g') ;;
+  esac
+  result=$(printf '%s' "$result" | tr '[:cntrl:]' '_')
+  while [[ "$result" == *__*__* ]]; do result="${result//__/_}"; done
+  result="${result#"${result%%[!_ ]*}"}"
+  result="${result%"${result##*[!_ ]}"}"
+  [[ -z "$result" ]] && result="unnamed_file"
+  echo "$result"
+}
+
+# ── process stdin ───────────────────────────────────────────────────────────
+# stdin format: <old-sha> <new-sha> <ref-name>
+bad_found=false
+bad_paths=()
+declare -A BAD_COMMITS  # commit -> list of bad paths
+
+while read -r old_sha new_sha ref_name; do
+  # Skip deletions
+  ZERO="0000000000000000000000000000000000000000"
+  [[ "$new_sha" == "$ZERO" ]] && continue
+
+  # Determine range of commits to check
+  if [[ "$old_sha" == "$ZERO" ]]; then
+    # New branch: check all commits
+    commit_range="$new_sha"
+  else
+    commit_range="${old_sha}..${new_sha}"
+  fi
+
+  # Check each new commit's full tree
+  while IFS= read -r commit; do
+    [[ -z "$commit" ]] && continue
+    while IFS= read -r -d '' entry; do
+      fpath="${entry#*	}"
+      bname="${fpath##*/}"
+      if has_bad_name "$bname"; then
+        bad_found=true
+        bad_paths+=("$fpath")
+        BAD_COMMITS["$commit"]+="$fpath"$'\n'
+      fi
+    done < <(git ls-tree -rz "$commit")
+  done < <(git rev-list "$commit_range" 2>/dev/null)
+done
+
+if [[ "$bad_found" == false ]]; then
+  exit 0
+fi
+
+# ── report ──────────────────────────────────────────────────────────────────
+echo ""
+echo "========================================="
+echo " REJECTED: filenames with illegal characters (platform: $PLATFORM)"
+echo "========================================="
+
+# Deduplicate and report
+declare -A SEEN
+for p in "${bad_paths[@]}"; do
+  if [[ -z "${SEEN[$p]+x}" ]]; then
+    echo "  BAD: $p"
+    suggested=$(sanitize_name "${p##*/}")
+    echo "    FIX: ${p%/*}/${suggested}"
+    SEEN["$p"]=1
+  fi
+done
+
+echo ""
+for commit in "${!BAD_COMMITS[@]}"; do
+  echo "  Found in commit: $(git log --oneline -1 "$commit" 2>/dev/null || echo "$commit")"
+done
+
+echo ""
+
+case "$ACTION" in
+  fix)
+    echo "ACTION=fix is not yet supported in pre-receive hook."
+    echo "Please use git-fix-bad-paths.sh locally to fix and re-push."
+    echo "Push rejected."
+    exit 1
+    ;;
+  reject|*)
+    echo "Push rejected. Fix the filenames and try again."
+    echo "  Tip: use git-fix-bad-paths.sh --apply to auto-fix."
+    echo "  Or:  git config hooks.badPaths.platform linux  (to relax rules)"
+    exit 1
+    ;;
+esac
